@@ -1,0 +1,355 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   body {
+  width: 100%;
+  background: url('bgimg.jpg') no-repeat center center fixed; /* Replace 'your-background-image.jpg' with the actual image path */
+  background-size: cover;
+  position: relative;
+  font-family: 'Poppins', sans-serif; /* Use the imported font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    .top-strip {
+      width: 100%;
+      height: 40px;
+      background: #00bcd4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info span {
+      margin-right: 20px;
+      font-size: 17px;
+      color: #000;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      color:black;
+    }
+
+    .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px; /* Adjust the top value to match the height of the top-strip */
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent; /* Make the navbar background transparent */
+            transition: background 0.5s ease; /* Add a smooth transition effect */
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px; /* Adjust the height as needed */
+            margin-right: 10px;
+            margin-top: 35px; /* Adjust the spacing between brand name and logo */
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end; /* Align items to the end (right) */
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4; /* Set navlinks to white color */
+            font-size: 25px;
+            font-weight: bolder;
+        
+        }
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #090e30;
+}
+.contact .content p{
+font-weight: 300;
+color: black;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background:  #00bcd4;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+
+}
+.container .contactInfo .box .text{
+
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #090e30;
+
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+input[type=button]{
+background-color: #00bcd4 ;
+color: white;
+padding: 12px 20px;
+border:none;
+border-radius: 4px;
+cursor:pointer;
+}
+
+
+input[type=button]:hover{
+    background-color:grey;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize:none;
+    
+
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
+}
+
+.container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #ooo;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }

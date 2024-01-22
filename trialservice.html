@@ -1,0 +1,301 @@
+ 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="homestyles.css">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            background: #fff;
+            position: relative;
+            font-family: roboto, sans-serif;
+        }
+.wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  /* transition: transform 0.1s linear; */
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+  left: -22px;
+}
+h1{
+  justify-content: center;
+  text-align: center;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .carousel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+.carousel.no-transition {
+  scroll-behavior: auto;
+}
+.carousel.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.carousel.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.carousel :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  background: #fff;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.carousel .card .img {
+  background: #8b53ff;
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.carousel .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+}
+.carousel .card span {
+  color: #6a6d78;
+  font-size: 1.31rem;
+}
+.dropdown{
+  box-sizing: border-box;
+}
+.select{
+   background: #2a2f3b; 
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   border: 2px #2a2f3b solid; 
+   border-radius: 0.5em; 
+  padding: 1em ;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.select-clicked{
+   border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a; 
+}
+.select:hover {
+  background: #323741;
+}
+.caret {
+  width: 0;
+  height: 0;
+   border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff; 
+  transition: 0.3s;
+}
+.caret-rotate {
+  transform: rotate(100deg);
+}
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+   background: #323741; 
+    border: 1px #363a43 solid;  
+   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);  
+    border-radius: 0.5em; 
+    color: #9fa5b5; 
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+.menu li {
+  margin: 0.3em 0;
+  padding: 0.7em 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+.menu li:hover {
+  background: #2a2d35;
+}
+.active {
+  background: #23242a;
+}
+.menu-open {
+  display: block;
+  opacity: 1;
+
+}
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+    </style>
+    <title>Internship</title>
+</head>
+<body>
+ <div class="wrapper">
+            <h1>Our Services</h1>
+            <i class="fa-solid fa-arrow-left"></i>
+            <ul class="carousel">
+                <li class="card">
+                    <div class="img">
+                        <a href="1.html">
+                            <img
+                                src="https://th.bing.com/th/id/OIP.EJnV5Y5NCThBFFLf7WNHcwHaHD?rs=1&pid=ImgDetMain"
+                                </a>
+                        </div>
+                        <a href="1.html" target="_blank">Neurology</a>
+                    </li>
+
+                    <li class="card">
+                        <div class="img">
+                            <a href="2.html">
+                                <img
+                                    src="https://th.bing.com/th/id/OIP.HfJBiPbDMEQswRqsBvJeSQHaE7?w=250&h=180&c=7&r=0&o=5&pid=1.7"
+                                    </a>
+                            </div>
+                            <a href="2.html" target="_blank"> Cardiac
+                                Science</a>
+
+                        </li>
+
+                        <li class="card">
+                            <div class="img">
+                                <a href="3.html">
+                                    <img
+                                        src="https://th.bing.com/th/id/OIP.q_ck32RUU3erKaROcZk-0wHaHa?w=204&h=204&c=7&r=0&o=5&pid=1.7"
+                                        </a>
+                                </div>
+                                <a href=" 3.html" target="_blank">
+                                    Orthopedic</a>
+
+                            </li>
+                            <li class="card">
+                                <div class="img">
+                                    <a href="4.html">
+                                        <img
+                                            src="https://th.bing.com/th/id/OIP.yOTKzS6PUcKt8TnbXkmMfgHaH0?w=156&h=180&c=7&r=0&o=5&pid=1.7"
+                                            </a>
+
+                                    </div>
+                                    <a href="4.html" target="_blank">Obstetric
+                                        ang gyanecology</a>
+
+                                </li>
+
+                                <li class="card">
+                                    <div class="img">
+                                        <a href="5.html">
+                                            <img
+                                                src="https://th.bing.com/th/id/OIP.l8MtGX1Fj82fTSKolvj8-wHaE8?w=291&h=195&c=7&r=0&o=5&pid=1.7"
+                                                </a>
+                                        </div>
+                                        <a href="5.html" target="_blank">Renal
+                                            Science</a>
+
+                                    </li>
+
+                                    <li class="card">
+                                        <div class="img">
+                                            <a href="6.html">
+                                                <img
+                                                    src="https://th.bing.com/th/id/OIP.-QC4rk0mhhytDRvU37zPSwHaE7?w=255&h=180&c=7&r=0&o=5&pid=1.7"
+                                                    </a>
+                                            </div>
+                                            <a href="6.html"
+                                                target="_blank">rehabilitationScience</a>
+
+                                        </li>
+
+                                        <li class="card">
+                                            <div class="img">
+                                                <a href="7.html">
+                                                    <img
+                                                        src="https://th.bing.com/th/id/OIP.1fEJrNTUtGnloPSW94sNqQHaE8?w=271&h=180&c=7&r=0&o=5&pid=1.7"
+                                                        </a>
+                                                </div>
+                                                <a href="7.html"
+                                                    target="_blank">Liver
+                                                    Dieases</a>
+
+                                            </li>
+
+                                        </ul>
+                                        <i
+                                            class="fa-solid fa-arrow-right"></i>
+                                    </div>
+
+ <script src="script.js"></script>
+</body>
+</html>

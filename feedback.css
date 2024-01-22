@@ -1,0 +1,295 @@
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   body {
+  width: 100%;
+  background: url('bgimg.jpg') no-repeat center center fixed; /* Replace 'your-background-image.jpg' with the actual image path */
+  background-size: cover;
+  position: relative;
+  font-family: 'Poppins', sans-serif; /* Use the imported font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    .top-strip {
+      width: 100%;
+      height: 40px;
+      background: #00bcd4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info span {
+      margin-right: 20px;
+      font-size: 17px;
+      color: #000;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      color:black;
+    }
+
+    .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px; /* Adjust the top value to match the height of the top-strip */
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent; /* Make the navbar background transparent */
+            transition: background 0.5s ease; /* Add a smooth transition effect */
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px; /* Adjust the height as needed */
+            margin-right: 10px;
+            margin-top: 35px; /* Adjust the spacing between brand name and logo */
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end; /* Align items to the end (right) */
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4; /* Set navlinks to white color */
+            font-size: 25px;
+            font-weight: bolder;
+        
+        }
+.container{
+    width: 360px;
+    background: #284b61;
+    box-shadow: 0 0 8px rgba(28, 44, 60, 0.6);
+    margin-top: 10%;
+    margin-left: 40%;
+    margin-bottom: 140px;
+    background-color: #b2aeae;
+}
+.container form{
+    width: 100%;
+    text-align: center;
+    padding: 25px 20px;
+}
+form h1{
+    padding: 10px 0;
+}
+form.id{
+    position: relative;
+}
+.id i{
+    position: absolute;
+    font-size: 20px;
+    top:50%;
+    right: 20px;
+    transform: translateY(-50%);
+
+}
+form input{
+    width: 100%;
+    height: 50px; 
+    margin: 4px 0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    background: #fff;
+    padding: 0 15px;
+    padding-right: 45px;
+    font-size: 20px;
+}
+form textarea{
+    padding: 5px 15px;
+    border: 1px solid #5c5c5c;
+    border-radius: 3px;
+    background: #fff;
+    padding: 0 15px;
+    font-size: 20px;
+    width: 100%;
+    margin: 4px 0;
+}
+
+form .id input[type="radio"] {
+    display: none; 
+}
+
+
+form .id label {
+    display: inline-block;
+    position: relative;
+    padding-left: 30px; 
+    cursor: pointer;
+    color: #fff;
+}
+
+form .id label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px; 
+    height: 20px; 
+    border: 2px solid #00fff0; 
+    border-radius: 50%; 
+    background-color: #181717; 
+}
+
+form .id input[type="radio"]:checked + label:before {
+    background-color: #00bcd4; 
+    border-color: #00fff0; 
+}
+
+form .id label:hover {
+    color: #00fff0; 
+}
+
+form .button{
+    
+    border: none;
+    background:#00bcd4;
+    color:#fff;
+    padding: 10px 0;
+    width: 100%;
+    font-size: 20px;
+    font-weight: 800;
+    cursor:pointer;
+    border-radius: 3px;
+}
+
+
+
+.container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #ooo;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+

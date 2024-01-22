@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="homestyles.css">
+    <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+            integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   body {
+  width: 100%;
+  background: url('bgimg.jpg') no-repeat center center fixed; /* Replace 'your-background-image.jpg' with the actual image path */
+  background-size: cover;
+  position: relative;
+  font-family: 'Poppins', sans-serif; /* Use the imported font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    .top-strip {
+      width: 100%;
+      height: 40px;
+      background: #00bcd4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info span {
+      margin-right: 20px;
+      font-size: 17px;
+      color: #000;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      color:black;
+    }
+
+    .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px; /* Adjust the top value to match the height of the top-strip */
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent; /* Make the navbar background transparent */
+            transition: background 0.5s ease; /* Add a smooth transition effect */
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px; /* Adjust the height as needed */
+            margin-right: 10px;
+            margin-top: 35px; /* Adjust the spacing between brand name and logo */
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end; /* Align items to the end (right) */
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4; /* Set navlinks to white color */
+            font-size: 25px;
+            font-weight: bolder;
+        
+        }
+        .carousel {
+  display: flex;
+  width: 92%;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  cursor: pointer;
+ 
+}
+
+.slider {
+  flex: 0 0 auto;
+  margin-right: 30px;
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  transition: 1s;
+  overflow: hidden;
+  
+ 
+}
+
+.slider img {
+  width: 70%;
+  min-height: 100%;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+}
+
+.slide-content {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(to left, #fff 80%, #fff);
+  color: #fff;
+}
+
+.movie-title {
+  padding-left: 50px;
+  text-transform: capitalize;
+  margin-top: 80px;
+  color: black;
+}
+
+.movie-des {
+  width: 80%;
+  line-height: 30px;
+  padding-left: 50px;
+  margin-top: 10px;
+  opacity: 0.8;
+  color: black;
+  font-size: 20px;
+}
+
+
+
+    
+
+    
+        .abtus{
+            margin-top: 10%;
+        }
+
+        .about {
+            margin: 60px auto;
+            width: 80%;
+            display: flex; /* Use flexbox for layout */
+            align-items: center;
+            justify-content: center; /* Center items horizontally */
+            scroll-snap-align: start; /* Snap to the start of each container */
+        }
+
+        .us {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .image-text-section {
+            margin: 60px auto;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            scroll-snap-align: start;
+        }
+
+        .image-text-container {
+            display: flex;
+            width: 100%;
+        }
+
+        .image {
+            width: 40%;
+        }
+
+        .image img {
+            width: 100%;
+        }
+
+        .text {
+            width: 55%;
+            text-align: left;
+            padding-left: 20px;
+            text-align: justify;
+            color: white;
+        }
+
+       .wrapper {
+  max-width: 1100px;
+  width: 100%;
+  position: relative;
+}
+.wrapper i {
+  top: 50%;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  font-size: 1.25rem;
+  position: absolute;
+  text-align: center;
+  line-height: 50px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.23);
+  transform: translateY(-50%);
+  /* transition: transform 0.1s linear; */
+}
+.wrapper i:active {
+  transform: translateY(-50%) scale(0.85);
+}
+.wrapper i:first-child {
+  left: -22px;
+}
+h1{
+  justify-content: center;
+  text-align: center;
+}
+.wrapper i:last-child {
+  right: -22px;
+}
+.wrapper .bla {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 12px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 16px;
+  border-radius: 8px;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.bla::-webkit-scrollbar {
+  display: none;
+}
+.bla.no-transition {
+  scroll-behavior: auto;
+}
+.bla.dragging {
+  scroll-snap-type: none;
+  scroll-behavior: auto;
+}
+.bla.dragging .card {
+  cursor: grab;
+  user-select: none;
+}
+.bla :where(.card, .img) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bla .card {
+  scroll-snap-align: start;
+  height: 342px;
+  list-style: none;
+  cursor: pointer;
+  padding-bottom: 15px;
+  flex-direction: column;
+  border-radius: 8px;
+}
+.bla .card .ser-img {
+
+  height: 148px;
+  width: 148px;
+  border-radius: 50%;
+}
+.card .ser-img img {
+  width: 140px;
+  height: 140px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 4px solid #fff;
+}
+.bla .card h2 {
+  font-weight: 500;
+  font-size: 1.56rem;
+  margin: 30px 0 5px;
+  color: white;
+}
+.bla .card span {
+  color: whitesmoke;
+  font-size: 1.31rem;
+  color: white;
+}
+.dropdown{
+  box-sizing: border-box;
+}
+.select{
+   background:white; 
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+   border: 2px white solid; 
+   border-radius: 0.5em; 
+  padding: 1em ;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.select-clicked{
+   border: 2px #26489a solid;
+  box-shadow: 0 0 0.8em #26489a; 
+}
+.select:hover {
+  background: #323741;
+}
+.caret {
+  width: 0;
+  height: 0;
+   border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #fff; 
+  transition: 0.3s;
+}
+.caret-rotate {
+  transform: rotate(100deg);
+}
+.menu {
+  list-style: none;
+  padding: 0.2em 0.5em;
+   background: #323741; 
+    border: 1px #363a43 solid;  
+   box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);  
+    border-radius: 0.5em; 
+    color: #9fa5b5; 
+  position: absolute;
+  top: 3em;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-50%);
+  opacity: 0;
+  display: none;
+  transition: 0.2s;
+  z-index: 1;
+}
+.menu li {
+  margin: 0.3em 0;
+  padding: 0.7em 0.5em;
+  border-radius: 0.5em;
+  cursor: pointer;
+  color: white;
+}
+.menu li:hover {
+  background:white;
+}
+.active {
+  background: white;
+}
+.menu-open {
+  display: block;
+  opacity: 1;
+
+}
+@media screen and (max-width: 900px) {
+  .wrapper .bla {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .bla {
+    grid-auto-columns: 100%;
+  }
+}
+
+.servie{
+    margin-top: 10%;
+    margin-left: 12%;
+}
+.apptform{
+    margin-top: 10%;
+}
+
+form {
+  background-color: #b2aeae;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-left: 35%;
+  margin-top: 30px;
+
+}
+
+ .label[for="Gender"] {
+  display: flex;
+  margin-right: 10px;
+  
+} 
+
+
+input[type="radio"] {
+  margin-right: 5px;
+  display: flex;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/*@media screen and (max-width:320px) {
+  .label{
+    width: 500px;
+  }
+
+}
+
+@media screen {
+  
+}*/
+
+#department {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+#gender {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+.team{
+    margin: 25px,0;
+    margin-top: 10%;
+    color: white;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+h1:after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+}
+
+.img-box {
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+
+
+ul li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: white; 
+}
+
+ul li a {
+    text-decoration: none; 
+    color: #333;
+    margin-left: 10px; 
+    color: white;
+    color: white;
+}
+
+
+
+
+
+.container3{
+    max-width: 1170px;
+    margin:auto;
+  }
+  .row{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ul{
+    list-style: none;
+  }
+  .footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #ooo;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
+
+</style>
+    <title>Internship</title>
+</head>
+
+
+<body>
+    
+    <div class="top-strip">
+        <div class="contact-info">
+            <span>Email: info@lifecarehospital.com</span>
+            <span>Phone: +123 456 7890</span>
+            <span>Address: 123 Street, City</span>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="logo.png" class="brand-logo" alt="">
+            <div class="brand-name"><b>LifeCare Hospital</b></div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-items"><a href="index.html">Home</a></li>
+            <li class="nav-items"><a href="appointment.html">Book Your Appointment</a></li>
+            <li class="nav-items"><a href="service.html">Services</a></li>
+            <li class="nav-items"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-items"><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+        </div>
+    </div>
+  
+
+
+<!-----------------------------------------------------------------------About ---------------------------------------------------------->
+<div class="abtus" >
+    <div class="about">
+        <h1 class="us" style="color: #fff;">About Us</h1>
+    </div>
+
+    <!-- New Section with Image and Text -->
+    <div class="image-text-section">
+        <div class="image-text-container">
+            <div class="image">
+                <img src="1.png" alt="Image" style="width: 100%; height: 400px;">
+            </div>
+            <div class="text">
+                <h2>Hello Myself Doctor Aradhya!</h2>
+                <p style="font-size: 20px;">Welcome to LifeCare Hospital, where your health is our priority. With a commitment to excellence, we strive to provide compassionate and comprehensive healthcare services tailored to meet your needs.</p><br>
+            <p style="font-size: 20px;">At LifeCare, our dedicated team of healthcare professionals is driven by a passion for healing. We prioritize patient well-being and offer a range of medical services, from routine check-ups to advanced treatments, all delivered with the utmost care and expertise.</p>
+            
+            
+        </div>
+            </div>
+        </div>
+    </div>
+
+<!-----------------------------------------------------------------------Services ---------------------------------------------------------->
+<div class="ser" >
+<div class="servie" >
+     <div class="wrapper">
+            <h1 style="color:white;">Our Services</h1>
+            <i class="fa-solid fa-arrow-left"></i>
+            <ul class="bla">
+                <li class="card">
+                    <div class="ser-img">
+                        <a href="1.html">
+                            <img
+                                src="https://th.bing.com/th/id/OIP.EJnV5Y5NCThBFFLf7WNHcwHaHD?rs=1&pid=ImgDetMain"
+                                </a>
+                        </div>
+                        <a href="1.html" target="_blank">Neurology</a>
+                    </li>
+
+                    <li class="card">
+                        <div class="ser-img">
+                            <a href="2.html">
+                                <img
+                                    src="https://th.bing.com/th/id/OIP.HfJBiPbDMEQswRqsBvJeSQHaE7?w=250&h=180&c=7&r=0&o=5&pid=1.7"
+                                    </a>
+                            </div>
+                            <a href="2.html" target="_blank"> Cardiac
+                                Science</a>
+
+                        </li>
+
+                        <li class="card">
+                            <div class="ser-img">
+                                <a href="3.html">
+                                    <img
+                                        src="https://th.bing.com/th/id/OIP.q_ck32RUU3erKaROcZk-0wHaHa?w=204&h=204&c=7&r=0&o=5&pid=1.7"
+                                        </a>
+                                </div>
+                                <a href=" 3.html" target="_blank">
+                                    Orthopedic</a>
+
+                            </li>
+                            <li class="card">
+                                <div class="ser-img">
+                                    <a href="4.html">
+                                        <img
+                                            src="https://th.bing.com/th/id/OIP.yOTKzS6PUcKt8TnbXkmMfgHaH0?w=156&h=180&c=7&r=0&o=5&pid=1.7"
+                                            </a>
+
+                                    </div>
+                                    <a href="4.html" target="_blank">Obstetric
+                                        ang gyanecology</a>
+
+                                </li>
+
+                                <li class="card">
+                                    <div class="ser-img">
+                                        <a href="5.html">
+                                            <img
+                                                src="https://th.bing.com/th/id/OIP.l8MtGX1Fj82fTSKolvj8-wHaE8?w=291&h=195&c=7&r=0&o=5&pid=1.7"
+                                                </a>
+                                        </div>
+                                        <a href="5.html" target="_blank">Renal
+                                            Science</a>
+
+                                    </li>
+
+                                    <li class="card">
+                                        <div class="ser-img">
+                                            <a href="6.html">
+                                                <img
+                                                    src="https://th.bing.com/th/id/OIP.-QC4rk0mhhytDRvU37zPSwHaE7?w=255&h=180&c=7&r=0&o=5&pid=1.7"
+                                                    </a>
+                                            </div>
+                                            <a href="6.html"
+                                                target="_blank">rehabilitationScience</a>
+
+                                        </li>
+
+                                        <li class="card">
+                                            <div class="ser-img">
+                                                <a href="7.html">
+                                                    <img
+                                                        src="https://th.bing.com/th/id/OIP.1fEJrNTUtGnloPSW94sNqQHaE8?w=271&h=180&c=7&r=0&o=5&pid=1.7"
+                                                        </a>
+                                                </div>
+                                                <a href="7.html"
+                                                    target="_blank">Liver
+                                                    Dieases</a>
+
+                                            </li>
+
+                                        </ul>
+                                        <i
+                                            class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <script >
+                                const wrapper = document.querySelector(".wrapper");
+const bla = document.querySelector(".bla");
+const firstCardWidth = bla.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const blaChildrens = [...bla.children];
+
+let isDragging = false,
+  isAutoPlay = true,
+  startX,
+  startScrollLeft,
+  timeoutId;
+
+let cardPerView = Math.round(bla.offsetWidth / firstCardWidth);
+
+blaChildrens
+  .slice(-cardPerView)
+  .reverse()
+  .forEach((card) => {
+    bla.insertAdjacentHTML("afterbegin", card.outerHTML);
+  });
+
+blaChildrens.slice(0, cardPerView).forEach((card) => {
+  bla.insertAdjacentHTML("beforeend", card.outerHTML);
+});
+
+bla.classList.add("no-transition");
+bla.scrollLeft = bla.offsetWidth;
+bla.classList.remove("no-transition");
+
+arrowBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    bla.scrollLeft += btn.id == "left" ? -firstCardWidth : firstCardWidth;
+  });
+});
+
+const dragStart = (e) => {
+  isDragging = true;
+  bla.classList.add("dragging");
+
+  startX = e.pageX;
+  startScrollLeft = bla.scrollLeft;
+};
+
+const dragging = (e) => {
+  if (!isDragging) return;
+
+  bla.scrollLeft = startScrollLeft - (e.pageX - startX);
+};
+
+const dragStop = () => {
+  isDragging = false;
+  bla.classList.remove("dragging");
+};
+
+const infiniteScroll = () => {
+  if (bla.scrollLeft === 0) {
+    bla.classList.add("no-transition");
+    bla.scrollLeft = bla.scrollWidth - 2 * bla.offsetWidth;
+    bla.classList.remove("no-transition");
+  } else if (
+    Math.ceil(bla.scrollLeft) ===
+    bla.scrollWidth - bla.offsetWidth
+  ) {
+    bla.classList.add("no-transition");
+    bla.scrollLeft = bla.offsetWidth;
+    bla.classList.remove("no-transition");
+  }
+
+  clearTimeout(timeoutId);
+  if (!wrapper.matches(":hover")) autoPlay();
+};
+
+const autoPlay = () => {
+  if (window.innerWidth < 800 || !isAutoPlay) return;
+  timeoutId = setTimeout(() => (bla.scrollLeft += firstCardWidth), 2500);
+};
+autoPlay();
+
+bla.addEventListener("mousedown", dragStart);
+bla.addEventListener("mousemove", dragging);
+document.addEventListener("mouseup", dragStop);
+bla.addEventListener("scroll", infiniteScroll);
+wrapper.addEventListener("mouseenter", () => clearTimeout(timeoutId));
+wrapper.addEventListener("mouseleave", autoPlay);
+
+const dropdowns = document.querySelectorAll(".dropdown");
+const select = document.querySelector(".select");
+const caret = document.querySelector(".caret");
+const menu = document.querySelector(".menu");
+const options = document.querySelectorAll(".menu li");
+const selected = document.querySelectorAll(".selected");
+
+select.addEventListener("click", () => {
+  select.classList.toggle("select-clicked");
+  caret.classList.toggle("caret-rotate");
+  menu.classList.toggle("menu-open");
+});
+
+options.forEach((option) => {
+  option.addEventListener("click", () => {
+    selected.innerText = option.innerText;
+    select.classList.remove("select-clicked");
+    caret.classList.remove("caret-rotate");
+    menu.classList.remove("menu-open");
+    options.forEach((option) => {
+      option.classList.remove("active");
+      option.classList.add("active");
+    });
+  });
+});
+ 
+                                
+                            </script>
+
+<!-----------------------------------------------------------------------appointment ---------------------------------------------------------->
+
+<div class="apptform" >
+    <strong style="margin-left: 40%; font-size: 20px; margin-top: 50px;color: white;">BOOK YOUR APPOINTMENT</strong>
+    <form id="appointmentForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="department">Choose Your Department:</label>
+    <select id="department" name="department" required>
+      <option value="" disabled selected>Select your department</option>
+      <option value="Neurology">Neurology</option>
+      <option value="Cardiology">Cardiology</option>
+      <option value="Orthopaedics">Orthopaedics</option>
+      <option value="Gynaecology">Gynaecology</option>
+      <option value="Urology">Urology and Nephrology</option>
+      <option value="Gastroenterolgy">Gastroenterolgy</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="gender">Gender:</label>
+    <div id="gender">
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="other">Other</label>
+    </div>
+
+    <label for="date">Preferred Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Preferred Time:</label>
+    <input type="time" id="time" name="time" required>
+
+    <input type="button" name="" value="Submit Appointment" onclick="formSend()">
+  </form>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+        function formSend(){
+                    
+            var name=document.getElementById("name").value;
+            var email=document.getElementById("email").value;
+            var contact=document.getElementById("phone").value;
+            var date=document.getElementById("date").value;
+
+            var body="Name:"+ name + "<br/> Email:" + email + "<br/> Contact Number:" + contact + "<br/> Date:" + date ;
+
+            console.log(body);
+
+                Email.send({
+                Host : "smtp.elasticemail.com",
+                Username : "lifecare579@gmail.com",
+                Password : "80B8221917A67D83B124C7E5974109012B7D",
+                To : 'lifecare579@gmail.com',
+                From : "lifecare579@gmail.com",
+                Subject : "Appointment form",
+                Body : body
+            }).then(
+            message => {
+                if(message=='OK'){
+                    swal("successfull", "Your data received successfully!", "success");
+                }
+                else{
+                    swal("something wrong", "Your data has not been sent!", "error");
+                }
+            }
+            );
+          }          
+  </script>
+  </form>
+</div>
+
+
+
+
+<!-----------------------------------------------------------------------Team ---------------------------------------------------------->
+
+
+<section class="team" >
+        <div class="container1">
+            <h1 style="color:#fff;">MEET OUR TEAM</h1>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="img-box">
+                    <img src="doc1.jpeg" class="img-responsive" alt="Dr. Nidhi Sharma">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>9080786790</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i>nidhisharma@lifecare.com</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <h2 >Dr. Nidhi Sharma</h2>
+                <h3>Founder</h3>
+                <p>MBBS, D.E.M (RCGP.UK), PGDHMM, PGDMLS</p>
+            </div>
+
+            <div class="col">
+                <div class="img-box">
+                    <img src="doc2.jpeg" class="img-responsive" alt="Dr. Rishab Sharma">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>8890786767</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i>rishabsharma@lifecare.com</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <h2>Dr. Rishab Sharma</h2>
+                <h3>Co-Founder</h3>
+                <p>MBBS, MD Chest Medicine, Chest Physician</p>
+            </div>
+
+            <div class="col">
+                <div class="img-box">
+                    <img src="doc4.jpeg" class="img-responsive" alt="Aisha Darak">
+                    <ul>
+                        <li><a href="#"><i class="fa-solid fa-phone"></i>7867564521</a></li>
+                        <li><a href="#"><i class="fa-solid fa-envelope"></i>aishadarak@lifecare.com</a></li>
+                        <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
+                    </ul>
+                </div>
+                <h2>Aisha Darak</h2>
+                <h3>Head of Department</h3>
+                <p>MBBS, IVF Specialist MSOBGY, Fellowship in Advance Infertility</p>
+            </div>
+
+           
+        </div>
+    </section><br><br>
+
+
+<!-----------------------------------------------------------------------Contact ---------------------------------------------------------->
+
+
+<section class="contact">
+    <div class="content">
+        <h2>Contact Us</h2>
+        <p>We would love to hear from you! 
+            Let us know of your experience with Lifecare,
+             and keep in touch. Please fill in the required details 
+             and our team will get in touch with you.</p>
+    </div>
+    
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Address</h3>
+                    <p>Sugar Camp Road,<br>beside clover center,<br>412301</p>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Phone</h3>
+                    <p>960-908-1234</p>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Email</h3>
+                    <p>lifecare@gmail.com</p>
+
+                </div>
+            </div>
+        </div>
+    
+        <form class="contactForm" >
+            <h2>
+                Send Message
+            </h2>
+            <div class="inputBox" >
+                <input type="text" name="" required="required" id="Name">
+                <span>Full Name</span>
+            </div>
+            <div class="inputBox" >
+                <input type="email" name=""  required="required" id="Email">
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="" required="required" id="Contact">
+                <span>phone number</span>
+            </div>
+            <div class="inputBox">
+                <textarea required="required" id="Message"></textarea>
+                <span>Type your message...</span>
+            </div>
+            <div >
+                <input type="button" name="" value="send" onclick="sendEmail()">
+                
+            </div>
+        </form>
+    
+    </div>
+</section>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function sendEmail(){
+                
+        var name=document.getElementById("Name").value;
+        var email=document.getElementById("Email").value;
+        var contact=document.getElementById("Contact").value;
+        var mess=document.getElementById("Message").value;
+
+        var body="Name:"+ name + "<br/> Email:" + email + "<br/> Contact Number:" + contact + "<br/> Message:" + mess ;
+
+        console.log(body);
+
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "lifecare579@gmail.com",
+            Password : "80B8221917A67D83B124C7E5974109012B7D",
+            To : 'lifecare579@gmail.com',
+            From : "lifecare579@gmail.com",
+            Subject : "enquiry of lifecare",
+            Body : body
+        }).then(
+        message => {
+            if(message=='OK'){
+                swal("successfull", "Your data received successfully!", "success");
+            }
+            else{
+                swal("something wrong", "Your data has not been sent!", "error");
+            }
+        }
+        );            
+                }
+</script>
+
+<style>
+
+.contactForm{
+    margin-right: 40px;
+}
+.contact
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+    
+    
+}
+.contact .content {
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 40px;
+    font-weight: 500px;
+    color: #fff;
+}
+.contact .content p{
+font-weight: 300;
+color: white;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+    margin-left: 10px;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    display: flex;
+    background:#00bcd4  ;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+    color: white;
+
+}
+.container .contactInfo .box .text{
+
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    flex-direction: column;
+    font-weight: 300;
+    color: white;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #090e30;
+
+}
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+
+}
+input[type=button]{
+background-color: #00bcd4 ;
+color: white;
+padding: 12px 20px;
+border:none;
+border-radius: 4px;
+cursor:pointer;
+}
+
+
+input[type=button]:hover{
+    background-color:grey;
+}
+
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize:none;
+    
+
+}
+.contactForm .inputBox span{
+    position: absolute;
+    left:0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span
+{
+    color: #e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]
+{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+
+}
+
+
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .container .contactInfo,
+    .contactForm {
+        width: 100%;
+        margin-bottom: 20px; /* Adjust margin as needed */
+    }
+}
+</style>
+
+
+
+
+
+
+    <!-----------------------------------------------------------------------------------Footer-------------------------------------------------------------------->
+
+
+
+
+    <footer class="footer">
+        <div class="container3">
+         <div class="row">
+           <div class="footer-col">
+             <h4>More Links</h4>
+             <ul>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Book an Appointment</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Hospital location</h4>
+             <p>MIDC Pune,<br>Hadapsar- 411028,<br> pune Phone: (886) 068-8606 <br>With 24-hour MD availability <br>
+            email-lifecareofficial11@gmail.com</p>
+           </div>
+           <div class="footer-col">
+             <h4>Newsletter</h4>
+             <input type="email" class="content1" placeholder="Entre your Email Here">
+             <button type="submit" class="main button "style="background-color: #000;">Subcribe</button>
+             <br> <br> <br>
+             <h4>Stay Connected</h4>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+
+     
+
+    <script src="index.js"></script> 
+   
+    
+</div>
+</body>
+</html>

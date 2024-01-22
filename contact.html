@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="top-strip">
+        <div class="contact-info">
+            <span>Email: info@lifecarehospital.com</span>
+            <span>Phone: +123 456 7890</span>
+            <span>Address: 123 Street, City</span>
+        </div>
+        <div class="social-icons">
+            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <nav class="navbar">
+        <div class="brand-container">
+            <img src="logo.png" class="brand-logo" alt="">
+            <div class="brand-name"><b>LifeCare Hospital</b></div>
+        </div>
+        <ul class="nav-links">
+            <li class="nav-items"><a href="index.html">Home</a></li>
+            <li class="nav-items"><a href="appointment.html">Book Your Appointment</a></li>
+            <li class="nav-items"><a href="service.html">Services</a></li>
+            <li class="nav-items"><a href="contact.html">Contact Us</a></li>
+            <li class="nav-items"><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </nav>
+    <div class="carousel-container">
+        <div class="carousel">
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+   <section class="contact">
+    <div class="content">
+        <h2 style="color:white;">Contact Us</h2>
+        <p style="color:white;">We would love to hear from you! 
+            Let us know of your experience with Lifecare,
+             and keep in touch. Please fill in the required details 
+             and our team will get in touch with you.</p>
+    </div>
+    
+    <div class="container">
+        <div class="contactInfo">
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Address</h3>
+                    <p style="color:white;">Sugar Camp Road,<br>beside clover center,<br>412301</p>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Phone</h3>
+                    <p style="color:white;">960-908-1234</p>
+
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="text">
+                    <h3 style="color:white;">Email</h3>
+                    <p style="color:white;">lifecare@gmail.com</p>
+
+                </div>
+            </div>
+        </div>
+    
+        <form class="contactForm" >
+            <h2>
+                Send Message
+            </h2>
+            <div class="inputBox" >
+                <input type="text" name="" required="required" id="Name">
+                <span>Full Name</span>
+            </div>
+            <div class="inputBox" >
+                <input type="email" name=""  required="required" id="Email">
+                <span>Email</span>
+            </div>
+            <div class="inputBox">
+                <input type="text" name="" required="required" id="Contact">
+                <span>phone number</span>
+            </div>
+            <div class="inputBox">
+                <textarea required="required" id="Message"></textarea>
+                <span>Type your message...</span>
+            </div>
+            <div >
+                <input type="button" name="" value="send" onclick="sendEmail()">
+                
+            </div>
+        </form>
+    
+    </div>
+</section>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script>
+    function sendEmail(){
+                
+        var name=document.getElementById("Name").value;
+        var email=document.getElementById("Email").value;
+        var contact=document.getElementById("Contact").value;
+        var mess=document.getElementById("Message").value;
+
+        var body="Name:"+ name + "<br/> Email:" + email + "<br/> Contact Number:" + contact + "<br/> Message:" + mess ;
+
+        console.log(body);
+
+            Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "lifecare579@gmail.com",
+            Password : "80B8221917A67D83B124C7E5974109012B7D",
+            To : 'lifecare579@gmail.com',
+            From : "lifecare579@gmail.com",
+            Subject : "enquiry of lifecare",
+            Body : body
+        }).then(
+        message => {
+            if(message=='OK'){
+                swal("successfull", "Your data received successfully!", "success");
+            }
+            else{
+                swal("something wrong", "Your data has not been sent!", "error");
+            }
+        }
+        );            
+                }
+</script>
+
+    <footer class="footer">
+        <div class="container3">
+         <div class="row">
+           <div class="footer-col">
+             <h4>More Links</h4>
+             <ul>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">Contact</a></li>
+               <li><a href="#">Book an Appointment</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>Hospital location</h4>
+             <p>MIDC Pune,<br>Hadapsar- 411028,<br> pune Phone: (886) 068-8606 <br>With 24-hour MD availability <br>
+            email-lifecareofficial11@gmail.com</p>
+           </div>
+           <div class="footer-col">
+             <h4>Newsletter</h4>
+             <input type="email" class="content1" placeholder="Entre your Email Here">
+             <button type="submit" class="main button "style="background-color: #000;">Subcribe</button>
+             <br> <br> <br>
+             <h4>Stay Connected</h4>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+    
+</body>
+</html>

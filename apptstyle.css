@@ -1,0 +1,331 @@
+
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+   body {
+  width: 100%;
+  background: url('bgimg.jpg') no-repeat center center fixed; /* Replace 'your-background-image.jpg' with the actual image path */
+  background-size: cover;
+  position: relative;
+  font-family: 'Poppins', sans-serif; /* Use the imported font */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+    .top-strip {
+      width: 100%;
+      height: 40px;
+      background: #00bcd4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 4%;
+      position: fixed;
+      top: 0;
+      z-index: 10;
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+    }
+
+    .contact-info span {
+      margin-right: 20px;
+      font-size: 17px;
+      color: #000;
+    }
+
+    .social-icons {
+      display: flex;
+      align-items: center;
+      color: black;
+    }
+
+    .social-icons a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      color:black;
+    }
+
+    .navbar {
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 20px; /* Adjust the top value to match the height of the top-strip */
+            left: 0;
+            padding: 0 4%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9;
+            background: transparent; /* Make the navbar background transparent */
+            transition: background 0.5s ease; /* Add a smooth transition effect */
+        }
+
+        .brand-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .brand-logo {
+            height: 90px; /* Adjust the height as needed */
+            margin-right: 10px;
+            margin-top: 35px; /* Adjust the spacing between brand name and logo */
+        }
+
+        .brand-name {
+            color: #00bcd4;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            margin-top: 10px;
+            display: flex;
+            list-style: none;
+            justify-content: flex-end; /* Align items to the end (right) */
+        }
+
+        .nav-items a {
+            text-decoration: none;
+            margin-left: 20px;
+            text-transform: capitalize;
+            color: #00bcd4; /* Set navlinks to white color */
+            font-size: 25px;
+            font-weight: bolder;
+        
+        }
+
+
+.apptform{
+    margin-top: 10%;
+    margin-bottom: 100px;
+}
+
+form {
+  background-color: #b2aeae;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  margin-left: 35%;
+  margin-top: 30px;
+
+}
+
+ .label[for="Gender"] {
+  display: flex;
+  margin-right: 10px;
+  
+} 
+
+
+input[type="radio"] {
+  margin-right: 5px;
+  display: flex;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/*@media screen and (max-width:320px) {
+  .label{
+    width: 500px;
+  }
+
+}
+
+@media screen {
+  
+}*/
+
+#department {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+}
+
+#gender {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+#gender input[type="radio"] {
+  margin-right: 5px;
+}
+
+
+.team{
+    margin: 25px,0;
+    margin-top: 10%;
+    color: white;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #333;
+    padding-bottom: 10px;
+}
+
+h1:after {
+    content: '';
+    background: #333;
+    display: block;
+    height: 3px;
+    width: 150px;
+    margin: 10px auto;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.col {
+    flex: 0 0 calc(25% - 20px);
+    margin: 10px;
+}
+
+.img-box {
+    position: relative;
+}
+
+.img-box img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+
+
+ul li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    color: white; 
+}
+
+ul li a {
+    text-decoration: none; 
+    color: #333;
+    margin-left: 10px; 
+    color: white;
+    color: white;
+}
+
+.footer{
+    background-color: #00bcd4;
+      padding: 70px 0;
+  }
+  .footer-col{
+     width: 25%;
+     padding: 0 15px;
+     color: #ooo;
+  }
+  .footer-col h4{
+    font-size: 18px;
+    color: #000;
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+  }
+  .footer-col h4::before{
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
+  }
+  .footer-col ul li:not(:last-child){
+    margin-bottom: 10px;
+  }
+  .footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #000;
+    text-decoration: none;
+    font-weight: 300;
+    color: #000;
+    display: block;
+    transition: all 0.3s ease;
+  }
+  .footer-col ul li a:hover{
+    color: #000;
+    padding-left: 8px;
+  }
+  .footer-col .social-links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #000;
+    transition: all 0.5s ease;
+  }
+  .footer-col .social-links a:hover{
+    color: #fff;
+    background-color: #000;
+  }
+
+  .content1{
+    font-size: 20px;
+    border: #000;
+  }
+  .main button{
+    border-radius: 14px;
+  }
+  /*responsive*/
+  @media(max-width: 767px){
+    .footer-col{
+      width: 50%;
+      margin-bottom: 30px;
+  }
+  }
+  @media(max-width: 574px){
+    .footer-col{
+      width: 100%;
+  }
+  }
